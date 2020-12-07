@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-image: url('./headphones_pink_blue.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #212121;
+}
+
+h1 {
+  padding: 20px;
+  background-color: #aa96da;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  color: #fff;
+}
+
+h1 .highlight {
+  color: #6c41ec;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App-playlist {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/*  Buttons on SearchBar and Playlist */
+
+.Playlist-save, .SearchButton {
+  cursor: pointer;
+  width: 10rem;
+  padding: .77rem 0;
+  border-radius: 10px;
+  border-width: 0px;
+  margin-top: 1.27rem;
+  background-color: #aa96da;
+  text-align: center;
+  font-size: .83rem;
+  transition: background-color .25s;
+  color: #fff;
+  font-weight: 500;
+}
+
+.Playlist-save:hover, .SearchButton:hover {
+  background-color: rgba(108, 65, 233, .7);
+}
+
+/* SearchResults and Playlist Boxes */
+
+.Playlist, .SearchResults {
+  width: 30%;
+  opacity: .7;
+  padding: 20px 40px;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 1020px) {
+  .SearchResults, .Playlist {
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,40 @@
+.Track {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid#fff;
+}
+
+.Track-action {
+    cursor: pointer;
+    font-size: 25px;
+    transition: color .25s;
+    /* background-color: #bdbdbd; */
+    color: #222222;
+    border: 0;
+}
+
+.blue {
+    background-color: #bfe3e1;
+}
+
+.pink {
+    background-color: #fdc6c3;
+}
+
+.Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+}
+
+.Track-information h3 {
+    margin-bottom: 5px;
+}
+
+.Track-information p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #757575;
+}

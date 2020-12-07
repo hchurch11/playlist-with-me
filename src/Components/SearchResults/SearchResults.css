@@ -1,0 +1,17 @@
+/* styling shared with Playlist is in the App.css file . */
+
+.SearchResults {
+    background-color: #BFE3E1;
+    box-shadow: 0 4px 2px 2px #99b6b4;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
