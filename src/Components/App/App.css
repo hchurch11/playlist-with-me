@@ -29,8 +29,10 @@ h1 {
 }
 
 h1 .highlight {
-  color: #6c41ec;
+  color: rgba(108, 65, 233, .7);
   font-size: 45px;
+  font-family: 'Pacifico', cursive;
+  ;
 }
 
 h2 {

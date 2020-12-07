@@ -69,7 +69,7 @@ export class App extends React.Component {
       <div className="App">
         <div>
           <h1>
-            Play<span className="highlight">LIST</span> with Me!
+            Play<span className="highlight">list </span> with Me!
           </h1>
           <div className="search-bar">
             <SearchBar onSearch={this.search} />
