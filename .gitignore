@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 .env.local
+.eslintcache
+reportWebVitals.js
+App.test.js
 
 # testing
 /coverage
