@@ -6,6 +6,7 @@ export class SearchBar extends React.Component {
     super(props);
     this.state = {
       searchedSong: "",
+      buttonText: "Connect to Spotify",
     };
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
@@ -13,6 +14,9 @@ export class SearchBar extends React.Component {
 
   search(searchedSong) {
     this.props.onSearch(this.state.searchedSong);
+    this.setState({
+      buttonText: "Search",
+    });
   }
 
   handleTermChange(event) {
