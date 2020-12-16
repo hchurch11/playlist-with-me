@@ -28,7 +28,7 @@ export class SearchBar extends React.Component {
           onChange={this.handleTermChange}
         />
         <button onClick={this.search} className="SearchButton">
-          Search
+          {!this.searchedSong ? "Connect to Spotify" : "Search"}
         </button>
       </div>
     );
