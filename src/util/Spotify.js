@@ -1,3 +1,5 @@
+/* import { SearchBar } from "../Components/SearchBar/SearchBar"; */
+
 const clientID = process.env.REACT_APP_CLIENT_ID;
 const redirectUri = process.env.REACT_APP_REDIRECT_URI;
 let accessToken;
@@ -34,6 +36,7 @@ const Spotify = {
         },
       }
     );
+
     const jsonResponse = await response.json();
     if (!jsonResponse.tracks) {
       return [];
@@ -46,6 +49,8 @@ const Spotify = {
       uri: track.uri,
     }));
   },
+
+  //saves playlist created to spotify account
   async savePlaylist(name, trackURIS) {
     if (!name || !trackURIS.length) {
       return;
@@ -60,15 +65,18 @@ const Spotify = {
     });
     const jsonResponse = await response.json();
     userId = jsonResponse.id;
-    const response_1 = await fetch(`/v1/users/${userId}/playlists`, {
-      headers: headers,
-      method: "POST",
-      body: JSON.stringify({ name: name }),
-    });
+    const response_1 = await fetch(
+      `https://api.spotify.com/v1/users/${userId}/playlists`,
+      {
+        headers: headers,
+        method: "POST",
+        body: JSON.stringify({ name: name }),
+      }
+    );
     const jsonResponse_1 = await response_1.json();
     const playlistId = jsonResponse_1.id;
     return fetch(
-      `https://api.spotify.com/v1//v1/users/${userId}/playlists/${playlistId}/tracks`,
+      `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,
       {
         headers: headers,
         method: "POST",
