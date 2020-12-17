@@ -16,8 +16,8 @@ export class Playlist extends React.Component {
     return (
       <div className="Playlist">
         <input
-          placeholder={"Name your playlist"}
-          // defaultValue={this.props.playlistName}
+          placeholder={this.props.playlistName}
+          defaultValue={this.props.playlistName}
           onChange={this.props.handleNameChange}
         />
         <TrackList

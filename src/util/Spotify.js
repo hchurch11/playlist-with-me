@@ -28,6 +28,7 @@ const Spotify = {
 
   async search(searchedSong) {
     const accessToken = Spotify.getAccessToken();
+    console.log(`access token: ` + accessToken);
     const response = await fetch(
       `https://api.spotify.com/v1/search?type=track&q=${searchedSong}`,
       {
@@ -36,7 +37,7 @@ const Spotify = {
         },
       }
     );
-
+    console.log(response);
     const jsonResponse = await response.json();
     if (!jsonResponse.tracks) {
       return [];
@@ -59,6 +60,7 @@ const Spotify = {
     const accessToken = Spotify.getAccessToken();
     const headers = { Authorization: `Bearer ${accessToken}` };
     let userId;
+    console.log(userId);
 
     const response = await fetch("https://api.spotify.com/v1/me", {
       headers: headers,
@@ -73,6 +75,7 @@ const Spotify = {
         body: JSON.stringify({ name: name }),
       }
     );
+    console.log(`name: ${name}`);
     const jsonResponse_1 = await response_1.json();
     const playlistId = jsonResponse_1.id;
     return fetch(

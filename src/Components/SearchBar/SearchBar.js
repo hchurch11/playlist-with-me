@@ -13,10 +13,10 @@ export class SearchBar extends React.Component {
   }
 
   search(searchedSong) {
-    this.props.onSearch(this.state.searchedSong);
     this.setState({
       buttonText: "Search",
     });
+    this.props.onSearch(this.state.searchedSong);
   }
 
   handleTermChange(event) {
@@ -32,7 +32,7 @@ export class SearchBar extends React.Component {
           onChange={this.handleTermChange}
         />
         <button onClick={this.search} className="SearchButton">
-          {!this.searchedSong ? "Connect to Spotify" : "Search"}
+          {this.state.buttonText}
         </button>
       </div>
     );
