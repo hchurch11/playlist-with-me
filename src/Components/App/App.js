@@ -22,20 +22,20 @@ export class App extends React.Component {
   }
 
   addTrack(track) {
-    let tracks = this.state.playlistTracks;
+    const tracks = this.state.playlistTracks.slice();
     if (tracks.find((savedTrack) => savedTrack.id === track.id)) {
       return;
-    } else {
+    } /* else {
       tracks.push(track);
       this.setState({
         playListTracks: tracks,
       });
-    }
+    } */
   }
 
   removeTrack(track) {
     let tracks = this.state.playlistTracks;
-    tracks = tracks.filter((currentTrack) => currentTrack.id !== track.id);
+    tracks = tracks.filter((Track) => Track.id !== track.id);
 
     this.setState({
       playListTracks: tracks,
