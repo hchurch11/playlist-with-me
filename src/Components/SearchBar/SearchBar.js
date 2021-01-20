@@ -6,16 +6,12 @@ export class SearchBar extends React.Component {
     super(props);
     this.state = {
       searchedSong: "",
-      buttonText: "Connect to Spotify",
     };
     this.search = this.search.bind(this);
     this.handleTermChange = this.handleTermChange.bind(this);
   }
 
   search(searchedSong) {
-    this.setState({
-      buttonText: "Search",
-    });
     this.props.onSearch(this.state.searchedSong);
   }
 
@@ -32,7 +28,7 @@ export class SearchBar extends React.Component {
           onChange={this.handleTermChange}
         />
         <button onClick={this.search} className="SearchButton">
-          {this.state.buttonText}
+          Search
         </button>
       </div>
     );
