@@ -18,7 +18,7 @@ export class Playlist extends React.Component {
         <input
           placeholder={this.props.playlistName}
           defaultValue={this.props.playlistName}
-          onChange={this.props.handleNameChange}
+          onChange={this.handleNameChange}
         />
         <TrackList
           tracks={this.props.playlistTracks}
